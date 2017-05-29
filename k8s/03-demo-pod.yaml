@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pod
+  labels:
+    app: self-healing-k8s-demo
+spec:
+  containers:
+  - name: demo-http-server
+    image: quay.io/robertjscott/demo-http-server:0.1.1

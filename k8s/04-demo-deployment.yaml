@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: demo-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: self-healing-k8s-demo
+    spec:
+      containers:
+      - name: demo-http-server
+        image: quay.io/robertjscott/demo-http-server:0.1.1

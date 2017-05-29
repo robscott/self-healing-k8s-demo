@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: mayhem-deployment
+spec:
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: mayhem
+    spec:
+      containers:
+      - name: mayhem
+        image: quay.io/robertjscott/mayhem:0.1.0
